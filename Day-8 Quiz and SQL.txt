@@ -1,0 +1,178 @@
+Amitkumar_Bhatt
+
+
+
+Control
+1.c
+2.b
+3.c
+4.g
+5.c
+6.d
+7.f
+8.e
+9.c
+10.c
+11.b
+12.b
+13.b
+14.b
+15.d
+16.h
+17.a
+18.f
+19.k
+20.d
+21.c
+22.b
+23.c
+24.e
+25.f
+26,27->Doubt
+
+
+Inheritance
+1.a,d,f
+2.b,d,e,f
+3.g
+4.a
+5.b,c
+6.b
+7.c
+8.c
+9.a
+10.a
+11.a
+12.a
+13.b
+14.c
+15.b
+16.e
+17.g
+18.b
+19.b
+20.b
+21.d
+
+
+
+Constructor
+1.d
+2.a
+3.d
+4.a,b
+5.a,b
+6.d
+7.c
+
+Argument
+
+1.b
+2.f
+3.b
+4.a
+5.c
+6.a
+7.b
+8.c
+9.a
+10.c
+11.d
+
+
+
+Exception
+1.a
+2.d
+3.c
+4.b
+5.c
+6.b
+7.d
+8.b
+9.c
+10.g
+11.b
+12.a
+13.d
+14.g
+15.d
+16.g
+17.g
+
+
+
+Interface
+1.d
+2.e
+3.a,e
+4.a,f
+5.a,b,d,ef
+6.a
+7.d,e
+8.a,b
+9.c,f
+10.b
+11.a,d,e
+12.e
+13.d
+14.b
+15.e
+16.3,4
+17.3,4
+18.1,2,3
+19.3,4,5
+20.2
+21.CT error
+22.RT error
+23.2
+24.3,4
+25.a
+26.b
+
+Packages
+1.d
+2.c
+3.d
+
+Overload
+1.b
+2.b
+3.b
+4.a
+5.a
+6.a
+7.d
+8.d
+
+//SQL QUERY
+
+create table Userdetails(
+User_ID INT NOT NULL primary key,
+UserName varchar(255),
+DOB date,
+MobNumber int,
+Email varchar(30),
+Address varchar(255)
+
+);
+
+create table Trainer(
+Trainer_ID int NOT NULL PRIMARY KEY,
+TrainerGender varchar(15),
+TrainerName varchar(255)
+);
+
+
+
+create table Appointment(
+Appointment_ID int not null PRIMARY KEY,
+User_ID int,
+Package varchar(255),
+DateOfAppointment date,
+PhysioRequired varchar(255),
+Trainer_ID int NOT NULL,
+
+FOREIGN KEY(User_ID) REFERENCES Userdetails(User_ID),
+FOREIGN KEY(Trainer_ID) REFERENCES Trainer(Trainer_ID)
+)
